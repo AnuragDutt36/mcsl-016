@@ -2,41 +2,72 @@
 <html lang="en">
 
 <head>
+    <!-- Meta information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EliteMart</title>
+    
+    <!-- Linking external fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+    
+    <!-- Linking external CSS file -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- JavaScript for form validation -->
+    <script>
+        function validateForm() {
+            var name = document.getElementById("fname").value;
+            var reason = document.getElementById("reason").value;
+            var feedback = document.getElementById("subject").value;
+
+            if (name == "" || reason == "" || feedback == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <body>
+    <!-- Header section -->
     <div class="header-feedback">
         <img src="images/logo.png" alt="">
         <h1>EliteMart</h1>
     </div>
+    
+    <!-- Navigation section -->
     <div class="pill-nav-feedback">
         <a href="home.html">Home</a>
         <a href="items.html">Items</a>
         <a href="seller_registration.html">Seller Registration Form</a>
-        <a class="active" href="feedback.html" style=" font-weight: 600;">Feedback</a>
+        <a class="active" href="feedback.html" style="font-weight: 600;">Feedback</a>
     </div>
+    
+    <!-- Form container -->
     <div class="container">
-        <form action="action_page.php">
+        <form action="action_page.php" onsubmit="return validateForm()">
+            <h1>Feedback</h1>
+            <hr>
 
-            <label for="fname">Customer's name</label>
+            <!-- Name input field -->
+            <label for="fname">Customer's Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-            <label for="reason">Reason for feedback</label>
+            <!-- Reason for feedback input field -->
+            <label for="reason">Reason for Feedback</label>
             <input type="text" id="reason" name="reason" placeholder="Your reason..">
 
+            <!-- Feedback text area -->
             <label for="subject">Feedback</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
 
+            <!-- Submit button -->
             <input type="submit" value="Submit">
-
         </form>
     </div>
 </body>

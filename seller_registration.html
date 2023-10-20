@@ -2,43 +2,73 @@
 <html lang="en">
 
 <head>
+    <!-- Meta information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EliteMart</title>
+
+    <!-- Linking external fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Linking external CSS file -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript for form validation -->
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var phNumber = document.getElementById("phNumber").value;
+            var address = document.getElementById("address").value;
+
+            if (name == "" || phNumber == "" || address == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <body>
+    <!-- Header section -->
     <div class="header-seller">
         <img src="images/logo.png" alt="">
         <h1>EliteMart</h1>
     </div>
+
+    <!-- Navigation section -->
     <div class="pill-nav-seller">
         <a href="home.html">Home</a>
         <a href="items.html">Items</a>
-        <a class="active" href="seller_registration.html" style=" font-weight: 600;">Seller Registration Form</a>
+        <a class="active" href="seller_registration.html" style="font-weight: 600;">Seller Registration Form</a>
         <a href="feedback.html">Feedback</a>
     </div>
-    <form action="action_page.php">
+
+    <!-- Registration form -->
+    <form action="action_page.php" onsubmit="return validateForm()">
         <div class="container">
             <h1>Register</h1>
             <p>Please fill in this form to create an account.</p>
             <hr>
 
+            <!-- Name input field -->
             <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Enter Name" name="name" id="name" required>
+            <input type="text" placeholder="Enter Name" name="name" id="name">
 
+            <!-- Phone Number input field -->
             <label for="phNumber"><b>Phone Number</b></label>
-            <input type="text" placeholder="Enter Phone Number" name="phNumber" id="phNumber" required>
+            <input type="text" placeholder="Enter Phone Number" name="phNumber" id="phNumber">
 
+            <!-- Address input field -->
             <label for="address"><b>Address</b></label>
-            <input type="text" placeholder="Address" name="address" id="address" required>
+            <input type="text" placeholder="Address" name="address" id="address">
             <hr>
 
+            <!-- Submit button -->
             <button type="submit" class="registerbtn">Register</button>
         </div>
     </form>
