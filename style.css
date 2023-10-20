@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header-home,
+.header-items,
+.header-seller,
+.header-feedback {
+    padding: 21px;
+    text-align: center;
+}
+
+.header-home {
+    background: orange;
+    color: whitesmoke;
+}
+
+/* Increase the font size of the heading */
+.header-home h1,
+.header-items h1,
+.header-seller h1,
+.header-feedback h1 {
+    font-size: 60px;
+}
+
+.pill-nav-home,
+.pill-nav-items,
+.pill-nav-seller,
+.pill-nav-feedback {
+    padding: 10px;
+}
+
+/* Style the links inside the pill navigation menu */
+.pill-nav-home a,
+.pill-nav-items a,
+.pill-nav-seller a,
+.pill-nav-feedback a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+/* Change the color of links on mouse-over */
+.pill-nav-home a:hover {
+    background-color: rgb(255, 231, 184);
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.pill-nav-home a.active {
+    background-color: orange;
+    color: white;
+}
+
+.homecontent {
+    text-align: center;
+    padding: 48px;
+    color: black;
+    font-family: Oswald;
+    font-size: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.homecontent h5 {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.homecontent_bold {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 6px 20px 6px 20px;
+    border-radius: 10px;
+}
+
+/*-------------- Items ---------------*/
+
+.header-items {
+    background: yellowgreen;
+    color: whitesmoke;
+}
+
+/* Change the color of links on mouse-over */
+.pill-nav-items a:hover {
+    background-color: rgb(224, 255, 161);
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.pill-nav-items a.active {
+    background-color: yellowgreen;
+    color: rgb(255, 255, 255);
+}
+
+#customers {
+    border-collapse: collapse;
+    width: 100%;
+}
+#customers td {
+    font-size: smaller;
+}
+
+#customers td,
+#customers th {
+    border: 4px solid #ffffff;
+    padding: 9px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(147, 202, 37);
+    color: white;
+    border-radius: 18px;
+}
+
+/*---------------- Seller Registration ----------------*/
+.header-seller {
+    background: rgb(39, 175, 224);
+    color: #ffffff;
+}
+
+.pill-nav-seller a:hover {
+    background-color: rgb(174, 234, 255);
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.pill-nav-seller a.active {
+    background-color: rgb(39, 175, 224);
+    color: rgb(255, 255, 255);
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 12% solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+    background-color: rgb(39, 175, 224);
+    color: rgb(255, 255, 255);
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* -----------------Feedback ------------------ */
+.header-feedback {
+    background: #C83200;
+    color: #ffffff;
+}
+
+.pill-nav-feedback a:hover {
+    background-color: #ffc7b5;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.pill-nav-feedback a.active {
+    background-color: #C83200;
+    color: rgb(255, 255, 255);
+}
+
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #c55b38;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #C83200;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+}

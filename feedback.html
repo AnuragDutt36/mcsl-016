@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteMart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header-feedback">
+        <img src="images/logo.png" alt="">
+        <h1>EliteMart</h1>
+    </div>
+    <div class="pill-nav-feedback">
+        <a href="home.html">Home</a>
+        <a href="items.html">Items</a>
+        <a href="seller_registration.html">Seller Registration Form</a>
+        <a class="active" href="feedback.html" style=" font-weight: 600;">Feedback</a>
+    </div>
+    <div class="container">
+        <form action="action_page.php">
+
+            <label for="fname">Customer's name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="reason">Reason for feedback</label>
+            <input type="text" id="reason" name="reason" placeholder="Your reason..">
+
+            <label for="subject">Feedback</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+</body>
+
+</html>
